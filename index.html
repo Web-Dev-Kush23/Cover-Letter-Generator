@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cover Letter Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>📄 Cover Letter Generator</h1>
+        <p>Generate professional cover letters in PDF format</p>
+      </div>
+
+      <div class="content">
+        <div class="form-group">
+          <label for="companyName">Company Name</label>
+          <input
+            type="text"
+            id="companyName"
+            placeholder="Enter company name (e.g., Wipro Ltd.)"
+            value="Wipro Ltd."
+          />
+        </div>
+
+        <div class="btn-container">
+          <button class="btn-preview" onclick="togglePreview()">
+            👁️ Preview Letter
+          </button>
+          <button class="btn-generate" onclick="generatePDF()">
+            📥 Download PDF
+          </button>
+        </div>
+
+        <div class="preview" id="preview">
+          <h3>📋 Letter Preview</h3>
+          <div class="letter-content" id="letterContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
